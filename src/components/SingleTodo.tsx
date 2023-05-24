@@ -13,7 +13,17 @@ type Props = {
 };
 
 const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
-    
+    // Before create Edit function, we have to create 2 states:
+    // 1st state is to keep track if Edit mode is ON or NOT
+    // 2nd state keeps the edited value of todos 
+    // todo.todo in 2nd state means it already contained todo before we want to edit
+    // So when we click edit, the input box will appear with the todo value created before
+    // const [edit, setEdit] = useState<boolean>(false);
+    // const [editTodo, setEditTodo] = useState<string>(todo.todo)
+
+    // const handleEdit = (id: number) => {
+
+    // }
 
   const handleDelete = (id: number) => {
     // If todo.id is not same as the received id, it'll be filtered out = not showed
@@ -42,7 +52,7 @@ const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
         )
       }
       <div>
-        <span className="icon" onClick={() => handleEdit(todo.id)}>
+        <span className="icon">
           <AiFillEdit />
         </span>
         <span className="icon" onClick={() => handleDelete(todo.id)}>
