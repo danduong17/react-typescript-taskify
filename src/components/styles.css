@@ -16,11 +16,11 @@
 }
 /* It'll shadow the rest when clicking the input bar */
 .input-box:focus {
-    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
-    outline: none;
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
 }
 .input-submit {
-  position: absolute; 
+  position: absolute;
   /* absolute because the button will be inside the input field */
   width: 50px;
   height: 50px;
@@ -35,9 +35,54 @@
   box-shadow: 0 0 10px black;
 }
 .input-submit:hover {
-    background-color: #388ae2;
+  background-color: #388ae2;
 }
 .input-submit:active {
-    transform: scale(0.8);
-    box-shadow: 0 0 5px black;
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+.todos {
+  /* flex to make all to dos wrapped in 1 line */
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
+}
+.todos-single {
+  display: flex;
+  width: 29.5%;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  /* transition: 0.2s; */
+}
+.todos-single-text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .todos-single {
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 95%;
+  }
+  .todos-single {
+    width: 100%;
+  }
 }

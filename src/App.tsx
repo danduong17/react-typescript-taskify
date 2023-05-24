@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import InputField from "./components/InputField";
 import { Todo } from "./model";
+import TodoList from "./components/TodoList";
 
 // As App is a functional component so declare App as type called FC of React
 const App: React.FC = () => {
@@ -34,9 +35,11 @@ const App: React.FC = () => {
       <span className="heading">Taskify</span>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       {/* Render all todo after being created */}
-      {todos.map((t) => (
+      {/* {todos.map((t) => (
         <li>{t.todo}</li>
-      ))};
+      ))}
+      ; */}
+      <TodoList todos={todos} setTodos={setTodos}/>
     </div>
   );
 };
